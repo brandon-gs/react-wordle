@@ -9,11 +9,13 @@ interface KeyProps extends PropsWithChildren {
 }
 
 const Key: FC<KeyProps> = ({ letter, status, children, onClick }) => {
-  const classes = status ? `${boardItemClassesByStatus[status]} text-light` : `bg-lightKey dark:bg-darkKey `;
+  const classes = status
+    ? `${boardItemClassesByStatus[status]} text-light`
+    : `bg-lightKey dark:bg-darkKey text-lightKeyText dark:text-darkKeyText`;
 
   return (
     <div
-      className={`min-w-key h-12 grid place-items-center rounded-md cursor-pointer select-none text-lightKeyText dark:text-darkKeyText ${classes}`}
+      className={`min-w-key h-12 grid place-items-center rounded-md cursor-pointer select-none ${classes}`}
       onClick={onClick}
     >
       {children ? (
