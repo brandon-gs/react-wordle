@@ -1,6 +1,6 @@
 # Wordle
 
-Wordle gama made with Typescript, React and Tailwind.
+Wordle game made with Typescript, React and Tailwind.
 
 #### [Live version: https://bgs-wordle.vercel.app/](https://bgs-wordle.vercel.app/)
 
