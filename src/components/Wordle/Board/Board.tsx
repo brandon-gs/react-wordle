@@ -14,6 +14,7 @@ const Board = () => {
               key={`board-row-${idxRow}-col-${idxCol}`}
               {...item}
               isSelected={idxRow === currentLineIdx && idxCol === currentWord.length}
+              className={item.status !== "default" ? "text-light" : ""}
             />
           ))}
         </div>

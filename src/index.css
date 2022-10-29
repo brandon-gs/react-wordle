@@ -11,8 +11,7 @@
 
 body {
   margin: 0;
-  min-width: 660px;
-  min-height: 100vh;
+  min-width: 680px;
 }
 
 @tailwind base;

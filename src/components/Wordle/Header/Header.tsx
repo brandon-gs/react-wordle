@@ -8,7 +8,7 @@ const Header = () => {
   const { openModalByKey } = useContext(ModalsContext);
 
   return (
-    <header className="navbar flex justify-between items-center mt-20 pl-6 pr-4 bg-lightHeaderBg dark:bg-darkHeaderBg w-full max-w-header h-header">
+    <header className="navbar flex justify-between items-center mt-10 pl-6 pr-4 bg-lightHeaderBg dark:bg-darkHeaderBg w-full max-w-header h-header">
       <InfoIcon
         className="text-lightIcons dark:text-darkIcons cursor-pointer w-7"
         onClick={() => openModalByKey("showHowToPlay")}

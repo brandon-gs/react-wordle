@@ -9,7 +9,7 @@ interface KeyProps extends PropsWithChildren {
 }
 
 const Key: FC<KeyProps> = ({ letter, status, children, onClick }) => {
-  const classes = status ? boardItemClassesByStatus[status] : `bg-lightKey dark:bg-darkKey `;
+  const classes = status ? `${boardItemClassesByStatus[status]} text-light` : `bg-lightKey dark:bg-darkKey `;
 
   return (
     <div
