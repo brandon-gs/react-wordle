@@ -61,20 +61,19 @@ export const WordleProvider: FC<PropsWithChildren> = ({ children }) => {
   const handleRevealedLetters = useCallback((boardToReveale: WordleBoardData) => {
     const newLetters = boardToReveale.flatMap((row) => row).filter((item) => item.status !== "default");
     setRevealedLetters((prevRevealedLetters) => {
-      const newRevealedLetters: Record<string, WordleLetterStatus> = {};
+      const newRevealedLetters: Record<string, WordleLetterStatus> = prevRevealedLetters;
       /**
        * Keep higher priority status if was revealed before on keyboard
        */
       newLetters.forEach((item) => {
-        const currentStatus = prevRevealedLetters[item.letter] ?? 0;
-        const currentPriorityStatus = WordlePriorityStatus[currentStatus] ?? null;
+        const currentStatus = prevRevealedLetters[item.letter];
+        const currentPriorityStatus = WordlePriorityStatus[currentStatus] ?? 0;
         const nextPriorityStatus = WordlePriorityStatus[item.status];
         if (currentPriorityStatus < nextPriorityStatus) {
           newRevealedLetters[item.letter] = item.status;
-          return;
         }
       });
-      return { ...prevRevealedLetters, ...newRevealedLetters };
+      return newRevealedLetters;
     });
   }, []);
 
