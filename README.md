@@ -2,6 +2,8 @@
 
 Wordle gama made with Typescript, React and Tailwind.
 
+#### [Live version: https://bgs-wordle.vercel.app/](https://bgs-wordle.vercel.app/)
+
 ## Getting Started
 
 1.- Clone the repository
@@ -33,3 +35,9 @@ $ pnpm dev
 
 # $ yarn dev
 ```
+
+# Screenshots
+
+<img src="https://github.com/brandon-gs/react-wordle/blob/main/docs/dark_mode.png?raw=true">
+
+<img src="https://github.com/brandon-gs/react-wordle/blob/main/docs/light_mode.png?raw=true">
